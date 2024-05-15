@@ -34,7 +34,7 @@ manext=.1
 LIBS=-Llib -lfusezip $(shell $(PKG_CONFIG) fuse --libs) $(shell $(PKG_CONFIG) libzip --libs)
 LIB=lib/libfusezip.a
 CXXFLAGS=-g -O0 -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
-RELEASE_CXXFLAGS=-O3 -static-libstdc++ -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
+RELEASE_CXXFLAGS=-O3 -march=native -mtune=native -static-libstdc++ -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
 PKG_CONFIG?=pkg-config
 FUSEFLAGS=$(shell $(PKG_CONFIG) fuse --cflags)
 ZIPFLAGS=$(shell $(PKG_CONFIG) libzip --cflags)
