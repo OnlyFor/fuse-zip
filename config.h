@@ -16,19 +16,15 @@
 //  You should have received a copy of the GNU General Public License     //
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.//
 ////////////////////////////////////////////////////////////////////////////
-#include <time.h>
-#define VERSION_DATE_FORMAT "%Y-%m-%d %H:%M:%S"
-char version_date[32];
-time_t now = time(NULL);
-strftime(version_date, sizeof(version_date), VERSION_DATE_FORMAT, localtime(&now));
 
 #ifndef CONFIG_H
 #define CONFIG_H
 
 #define FUSE_USE_VERSION 27
 #define PROGRAM "fuse-zip"
+#define VERSION_DATE __DATE__ " " __TIME__
+#define VERSION "0.7.2 (" VERSION_DATE ")"
 // #define VERSION "0.7.2"
-#define VERSION "0.7.2 (" version_date ")"
 
 #endif
 
