@@ -61,7 +61,7 @@ $(DEST): $(OBJECTS) $(LIB)
 main.o: main.cpp
 	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< \
 	    -Ilib \
-	    -o $@ /usr/local/lib/mimalloc.o
+	    -o $@
 
 $(LIB):
 	$(MAKE) -C lib
