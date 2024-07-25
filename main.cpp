@@ -25,7 +25,6 @@
 #include <mimalloc.h>
 #include <mimalloc-override.h>
 #include <mimalloc-new-delete.h>
-#include <cstdlib>
 
 #include "config.h"
 
@@ -46,6 +45,7 @@
 
 #include "fuse-zip.h"
 #include "fuseZipData.h"
+#include <cstdlib>
 
 #if (LIBZIP_VERSION_MAJOR < 1)
     #error "libzip >= 1.0 is required!"
