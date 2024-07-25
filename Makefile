@@ -55,8 +55,8 @@ doc: $(MAN)
 doc-clean: man-clean
 
 $(DEST): $(OBJECTS) $(LIB)
-	$(CXX) $(OBJECTS) $(LDFLAGS) $(LIBS) \
-	    -o $@ /usr/local/lib/mimalloc.o
+	$(CXX) $(OBJECTS) /usr/local/lib/mimalloc.o $(LDFLAGS) $(LIBS) \
+	    -o $@
 
 main.o: main.cpp
 	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< \
