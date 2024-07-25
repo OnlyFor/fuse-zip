@@ -38,10 +38,10 @@ release:
 	$(MAKE) CXXFLAGS="$(RELEASE_CXXFLAGS)" all
 
 $(DEST): $(OBJECTS)
-	$(AR) -cr $@ $(OBJECTS) /usr/local/lib/mimalloc.o
+	$(AR) -cr $@ $(OBJECTS)
 
 .cpp.o:
-	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< -o $@ /usr/local/lib/mimalloc.o
+	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< -o $@
 
 clean:
 	rm -f $(DEST) $(OBJECTS)

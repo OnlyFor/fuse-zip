@@ -56,12 +56,12 @@ doc-clean: man-clean
 
 $(DEST): $(OBJECTS) $(LIB)
 	$(CXX) $(OBJECTS) $(LDFLAGS) $(LIBS) \
-	    -o $@ /usr/local/lib/mimalloc.o
+	    -o $@
 
 main.o: main.cpp
 	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< \
 	    -Ilib \
-	    -o $@ /usr/local/lib/mimalloc.o
+	    -o $@
 
 $(LIB):
 	$(MAKE) -C lib
