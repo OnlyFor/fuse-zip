@@ -41,7 +41,7 @@ $(DEST): $(OBJECTS)
 	$(AR) -cr $@ /usr/local/lib/mimalloc.o $(OBJECTS)
 
 .cpp.o:
-	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< -o $@ /usr/local/lib/mimalloc.o
+	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< -o $@
 
 clean:
 	rm -f $(DEST) $(OBJECTS)
