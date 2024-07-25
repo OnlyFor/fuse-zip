@@ -17,9 +17,6 @@
 //  along with this program.  If not, see <https://www.gnu.org/licenses/>.//
 ////////////////////////////////////////////////////////////////////////////
 
-#include "mimalloc.h"
-#include "mimalloc-override.h"
-
 #ifndef CONFIG_H
 #define CONFIG_H
 
