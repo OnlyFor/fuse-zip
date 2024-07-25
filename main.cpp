@@ -22,10 +22,6 @@
 #define KEY_RO (2)
 #define KEY_FORCE_PRECISE_TIME (3)
 
-#include <mimalloc.h>
-#include <mimalloc-override.h>
-#include <mimalloc-new-delete.h>
-
 #include "config.h"
 
 #pragma GCC diagnostic push
@@ -45,7 +41,6 @@
 
 #include "fuse-zip.h"
 #include "fuseZipData.h"
-#include <cstdlib>
 
 #if (LIBZIP_VERSION_MAJOR < 1)
     #error "libzip >= 1.0 is required!"
