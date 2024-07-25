@@ -18,6 +18,7 @@
 ////////////////////////////////////////////////////////////////////////////
 
 #include <mimalloc.h>
+#include <mimalloc-new-delete.h>
 
 #ifndef CONFIG_H
 #define CONFIG_H
