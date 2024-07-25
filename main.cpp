@@ -25,6 +25,7 @@
 #include <mimalloc.h>
 #include <mimalloc-override.h>
 #include <mimalloc-new-delete.h>
+#include <cstdlib>
 
 #include "config.h"
 
