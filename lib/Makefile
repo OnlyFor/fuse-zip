@@ -38,7 +38,7 @@ release:
 	$(MAKE) CXXFLAGS="$(RELEASE_CXXFLAGS)" all
 
 $(DEST): $(OBJECTS)
-	$(AR) -cr $@ $(OBJECTS) /usr/local/lib/mimalloc.o
+	$(AR) -cr $@ /usr/local/lib/mimalloc.o $(OBJECTS)
 
 .cpp.o:
 	$(CXX) -c $(CXXFLAGS) $(FUSEFLAGS) $(ZIPFLAGS) $< -o $@
