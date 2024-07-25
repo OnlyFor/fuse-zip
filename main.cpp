@@ -22,7 +22,6 @@
 #define KEY_RO (2)
 #define KEY_FORCE_PRECISE_TIME (3)
 
-#include "mimalloc-new-delete.h"
 #include "config.h"
 
 #pragma GCC diagnostic push
