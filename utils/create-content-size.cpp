@@ -1,5 +1,3 @@
-#include <mimalloc-override.h>
-#include <mimalloc-new-delete.h>
 ////////////////////////////////////////////////////////////////////////////
 //  Copyright (C) 2019-2021 by Alexander Galanin                          //
 //  al@galanin.nnov.ru                                                    //
