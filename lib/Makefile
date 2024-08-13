@@ -25,7 +25,7 @@ DEST=libfusezip.a
 PKG_CONFIG?=pkg-config
 LIBS=$(shell $(PKG_CONFIG) fuse --static --libs) $(shell $(PKG_CONFIG) libzip --static --libs) $(shell $(PKG_CONFIG) mimalloc --static --libs)
 CXXFLAGS=-g -O0 -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
-RELEASE_CXXFLAGS=-g0 -O3 -flto=auto -march=native -static-libstdc++ -fPIC -fstack-protector-strong -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
+RELEASE_CXXFLAGS=-g0 -O3 -flto=auto -fuse-linker-plugin -march=native -static-libstdc++ -fPIC -fstack-protector-strong -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
 FUSEFLAGS=$(shell $(PKG_CONFIG) fuse --static --cflags)
 ZIPFLAGS=$(shell $(PKG_CONFIG) libzip --static --cflags)
 SOURCES=$(sort $(wildcard *.cpp))
