@@ -33,7 +33,7 @@ man1dir=$(mandir)/man1
 manext=.1
 LIBS=-Llib -lfusezip $(shell $(PKG_CONFIG) fuse --static --libs) $(shell $(PKG_CONFIG) libzip --static --libs) $(shell $(PKG_CONFIG) mimalloc --static --libs) -L/usr/local/lib64
 LIB=lib/libfusezip.a
-CXXFLAGS=-g -O0 -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
+CXXFLAGS=-g -O0 -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11 -I/usr/local/include -include mimalloc-new-delete.h
 RELEASE_CXXFLAGS=-g0 -O3 -flto=auto -fuse-linker-plugin -march=native -static-libstdc++ -fPIC -fstack-protector-strong -Wall -Wextra -Wconversion -Wsign-conversion -Wlogical-op -Wshadow -pedantic -Werror -std=c++11
 PKG_CONFIG?=pkg-config
 FUSEFLAGS=$(shell $(PKG_CONFIG) fuse --static --cflags)
