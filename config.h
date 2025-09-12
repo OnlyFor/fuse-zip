@@ -1,4 +1,4 @@
-#include <mimalloc-new-delete.h>
+// #include <mimalloc-new-delete.h>
 ////////////////////////////////////////////////////////////////////////////
 //  Copyright (C) 2008-2021 by Alexander Galanin                          //
 //  al@galanin.nnov.ru                                                    //
