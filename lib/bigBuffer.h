@@ -87,7 +87,7 @@ public:
      * @param z         Zip file
      * @param nodeId    Node index inside zip file
      * @param length    File length
-     * @throws 
+     * @throws
      *      std::exception  On file read error
      *      std::bad_alloc  On memory insufficiency
      */
@@ -152,4 +152,3 @@ public:
 };
 
 #endif
-
